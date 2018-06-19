@@ -42,6 +42,8 @@ module Players
           "6"
         elsif board.taken?(6) && board.taken?(5)
           "4"
+        elsif board.taken?(3) && board.taken?(5)
+          "7"
         # elsif board.taken?(2) && board.taken?(1)
         #   "3"
         # elsif board.taken?(4) && board.taken?(1)
