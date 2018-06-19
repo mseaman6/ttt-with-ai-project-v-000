@@ -80,6 +80,8 @@ module Players
         #   "6"
         # elsif board.taken?(6) && board.taken?(5)
         #   "4"
+        else
+          (rand(9) + 1).to_s
         end
       elsif board.turn_count == 6
         if board.taken?(3) && board.taken?(5)
