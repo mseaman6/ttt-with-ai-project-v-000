@@ -92,6 +92,8 @@ module Players
           "4"
         elsif board.taken?(4) && board.taken?(5)
           "6"
+        else
+          (rand(9) + 1).to_s
         end
       elsif board.turn_count == 7
         if board.taken?(1) && board.taken?(7)
@@ -102,6 +104,8 @@ module Players
           "8"
         elsif board.taken?(9) && board.taken?(3)
           "6"
+        else
+          (rand(9) + 1).to_s
         end
       else
         (rand(9) + 1).to_s
