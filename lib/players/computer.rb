@@ -14,8 +14,28 @@ module Players
         "9" unless board.taken?(9)
         corners(board)
       elsif board.turn_count == 3
-        edges(board)
-      elsif board.turn_count == 4
+        if board.taken?(5)
+          if board.taken?(1)
+            "9"
+          elsif board.taken?(2)
+            "8"
+          elsif board.taken?(3)
+            "7"
+          elsif board.taken?(4)
+            "6"
+          elsif board.taken?(6)
+            "4"
+          elsif board.taken?(7)
+            "3"
+          elsif board.taken?(8)
+            "2"
+          elsif board.taken?(9)
+            "1"
+          end
+        else
+          edges(board)
+        end
+      elsif board.turn_count >= 4
         if board.taken?(2) && board.taken?(5)
           "8"
         elsif board.taken?(8) && board.taken?(5)
@@ -24,6 +44,22 @@ module Players
           "6"
         elsif board.taken?(6) && board.taken?(5)
           "4"
+        # elsif board.taken?(2) && board.taken?(1)
+        #   "3"
+        # elsif board.taken?(4) && board.taken?(1)
+        #   "7"
+        # elsif board.taken?(6) && board.taken?(9)
+        #   "3"
+        # elsif board.taken?(8) && board.taken?(9)
+        #   "7"
+        # elsif board.taken?(1) && board.taken?(7)
+        #   "4"
+        # elsif board.taken?(1) && board.taken?(3)
+        #   "2"
+        # elsif board.taken?(7) && board.taken?(9)
+        #   "8"
+        # elsif board.taken?(9) && board.taken?(3)
+        #   "6"
         end
       elsif board.turn_count == 5
         if board.taken?(2) && board.taken?(1)
@@ -34,6 +70,14 @@ module Players
           "3"
         elsif board.taken?(8) && board.taken?(9)
           "7"
+        elsif board.taken?(2) && board.taken?(5)
+          "8"
+        elsif board.taken?(8) && board.taken?(5)
+          "2"
+        elsif board.taken?(4) && board.taken?(5)
+          "6"
+        elsif board.taken?(6) && board.taken?(5)
+          "4"
         end
       elsif board.turn_count == 6
         if board.taken?(3) && board.taken?(5)
