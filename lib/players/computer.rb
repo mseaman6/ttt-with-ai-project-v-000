@@ -28,8 +28,8 @@ module Players
            "3"
         elsif board.taken?(8) && board.taken?(5)
            "2"
-        elsif board.taken?(9) && board.taken?(5)
-           "1"
+        # elsif board.taken?(9) && board.taken?(5)
+        #    "1"
         else
           edges(board)
         end
