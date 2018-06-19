@@ -14,22 +14,22 @@ module Players
         "9" unless board.taken?(9)
         corners(board)
       elsif board.turn_count == 3
-        if board.taken?(1) && board.taken?(5)
-          "9"
-        elsif board.taken?(2) && board.taken?(5)
-          "8"
-        elsif board.taken?(3) && board.taken?(5)
-          "7"
-        elsif board.taken?(4) && board.taken?(5)
-          "6"
-          # elsif board.taken?(6)
-          #   "4"
-          # elsif board.taken?(7)
-          #   "3"
-          # elsif board.taken?(8)
-          #   "2"
-          # elsif board.taken?(9)
-          #   "1"
+      #   if board.taken?(1) && board.taken?(5)
+      #     "9"
+      #   elsif board.taken?(2) && board.taken?(5)
+      #     "8"
+      #   elsif board.taken?(3) && board.taken?(5)
+      #     "7"
+      #   elsif board.taken?(4) && board.taken?(5)
+      #     "6"
+        if board.taken?(6) && board.taken?(5)
+          "4"
+        elsif board.taken?(7) && board.taken?(5)
+           "3"
+        elsif board.taken?(8) && board.taken?(5)
+           "2"
+        elsif board.taken?(9) && board.taken?(5)
+           "1"
         else
           edges(board)
         end
