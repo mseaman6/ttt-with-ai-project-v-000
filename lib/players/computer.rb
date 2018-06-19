@@ -35,7 +35,7 @@ module Players
         else
           edges(board)
         end
-      elsif board.turn_count >= 4
+      elsif board.turn_count == 4
         if board.taken?(2) && board.taken?(5)
           "8"
         elsif board.taken?(8) && board.taken?(5)
