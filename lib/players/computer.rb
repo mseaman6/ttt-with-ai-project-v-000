@@ -96,14 +96,14 @@ module Players
           (rand(9) + 1).to_s
         end
       elsif board.turn_count == 7
-        if board.taken?(1) && board.taken?(7)
-          "4" unless board.taken?(4)
-        elsif board.taken?(1) && board.taken?(3)
-          "2" unless board.taken?(2)
-        elsif board.taken?(7) && board.taken?(9)
-          "8" unless board.taken?(8)
-        elsif board.taken?(9) && board.taken?(3)
-          "6" unless board.taken?(6)
+        if (board.taken?(1) && board.taken?(7)) unless board.taken?(4)
+          "4"
+        elsif (board.taken?(1) && board.taken?(3)) unless board.taken?(2)
+          "2"
+        elsif (board.taken?(7) && board.taken?(9)) unless board.taken?(8)
+          "8"
+        elsif (board.taken?(9) && board.taken?(3)) unless board.taken?(6)
+          "6"
         else
           (rand(9) + 1).to_s
         end
