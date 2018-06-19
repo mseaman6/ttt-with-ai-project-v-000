@@ -22,17 +22,17 @@ module Players
       #     "7"
       #   elsif board.taken?(4) && board.taken?(5)
       #     "6"
-        if board.taken?(6) && board.taken?(5)
-          "4"
-        elsif board.taken?(7) && board.taken?(5)
-           "3"
-        elsif board.taken?(8) && board.taken?(5)
-           "2"
+        # if board.taken?(6) && board.taken?(5)
+        #   "4"
+        # elsif board.taken?(7) && board.taken?(5)
+        #    "3"
+        # elsif board.taken?(8) && board.taken?(5)
+        #    "2"
         # elsif board.taken?(9) && board.taken?(5)
         #    "1"
-        else
+        # else
           edges(board)
-        end
+        # end
       elsif board.turn_count == 4
         if board.taken?(2) && board.taken?(5)
           "8"
